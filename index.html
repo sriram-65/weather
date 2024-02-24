@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Weather App</title>
+    <title>Weather App in JavaScript | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
@@ -86,7 +86,7 @@ body{
 .wrapper{
   width:100%;
   height: 100vh;
-  background: #1d102c;
+  background: #0b0513;
 
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
   color:#fff;
@@ -368,9 +368,17 @@ arrowBack.addEventListener("click", ()=>{
 });
 
 
-let getuser = document.getElementById("getuser")
+let getuser= document.getElementById("getuser")
+let tie = new Date()
+let hour = tie.getHours()
 
-let val = localStorage.getItem("username")
+if(hour>18){
+  getuser.innerHTML="Good Evening";
+  document.body.style.background="#0b0513";
+}
+else{
+  getuser.innerHTML="Good Morning";
+  document.body.style.background="#fff";
+}
 
-getuser.innerHTML=val;
-    </script>
+</script>
